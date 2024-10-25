@@ -1,0 +1,10 @@
+trigger DeliveryHubTrigger on Delivery_Hub__c (before insert) {
+
+    for(Delivery_Hub__c hub : Trigger.new){
+
+        
+        hub.Hub_Distance__c = hub.Hub_Distance_Calculation__c;
+
+    }
+
+}
